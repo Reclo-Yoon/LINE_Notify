@@ -14,7 +14,6 @@ class LineNotify:
         self.__payload = {
             'message': f'message: {notificationMessage}'
         }
-        return self.__payload
 
     def sendRequest(self):
         requests.post(LineNotify.API_URL, headers=self.__headers, data=self.__payload)
